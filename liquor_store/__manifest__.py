@@ -7,9 +7,21 @@
     'version': '1.0.0',
     'sequence': 1,
     'author': 'Omni Software Ltd, Uganda',
-    'summary': 'Management System for your liquor store',
     # 'live_test_url': 'https://www.youtube.com/watch?v=0kaHMTtn7oY',
-    'description': "Odoo 17 CE Liquor Store Management System",
+    'summary': 'Comprehensive Management System for Liquor Stores',
+    'description': """
+    Odoo 17 Community Edition Liquor Store Management System
+
+    Features:
+    - Brand Management
+    - Bottle Inventory Tracking
+    - Customer Management
+    - Supplier Transactions
+    - Sales Order Processing
+    - Invoicing
+    - Reporting and Analytics
+    - Sales Dashboard
+    """,
     'website': 'https://omnitech.co.ug/',
     'data': [
         'security/access_groups.xml',
