@@ -2,8 +2,15 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'liquor_store',
+    'name': 'Odoo Liquor Store Management System',
     'depends' : ['mail', 'base', 'web', 'sale', 'board'],
+    'version': '1.0.0',
+    'sequence': 1,
+    'author': 'Omni Software Ltd, Uganda',
+    'summary': 'Management System for your liquor store',
+    # 'live_test_url': 'https://www.youtube.com/watch?v=0kaHMTtn7oY',
+    'description': "Odoo 17 CE Liquor Store Management System",
+    'website': 'https://omnitech.co.ug/',
     'data': [
         'security/access_groups.xml',
         'security/ir.model.access.csv',
@@ -35,4 +42,5 @@
             'liquor_store/static/src/components/**/*.scss',
         ],
     },
+    'images': ['static/description/banner.jpg'],
 }
