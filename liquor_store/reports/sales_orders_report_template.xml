@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <template id="report_sales_orders">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <t t-foreach="docs" t-as="doc">
+                            <h2>Receipt</h2>
+                            <div>
+                                <h3>Order Reference: <t t-esc="doc.name_seq"/></h3>
+                                <p>Date: <t t-esc="doc.date"/></p>
+                                <p>Salesperson: <t t-esc="user.name"/></p>
+                            </div>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Unit Price</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="doc.order_line_ids" t-as="line">
+                                        <tr>
+                                            <td><t t-esc="line.bottle_id.brand.name"/></td>
+                                            <td><t t-esc="line.unit_price"/></td>
+                                            <td><t t-esc="line.subtotal"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2" style="text-align: right;"><b>Total:</b></td>
+                                        <td><t t-esc="doc.total_amount"/></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
